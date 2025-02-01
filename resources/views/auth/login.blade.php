@@ -81,7 +81,7 @@
             z-index: 10;
             padding: 60px 60px 80px;
             left: 50%;
-            margin-left: -230px;
+            margin-left: -200px;
             opacity: 0.85;
             border-radius: 10px;
         }
@@ -312,7 +312,7 @@ color: red;
             <br>
             <h2 class="success">Success!</h2>
 
-            <input type="email" name="email" id="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}">
+            <input type="email" name="email" id="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email')  }}">
             @error('email')
             <small class="invalid-feedback">{{ $message }}</small>
             @enderror

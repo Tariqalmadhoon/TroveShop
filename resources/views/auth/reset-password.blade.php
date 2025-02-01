@@ -126,7 +126,7 @@
             z-index: 10;
             padding: 60px 60px 80px;
             left: 50%;
-            margin-left: -230px;
+            margin-left: -200px;
             opacity: 0.85;
             border-radius: 10px;
         }

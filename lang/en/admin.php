@@ -1,6 +1,8 @@
 <?php
 return [
     'dash' => 'Dashboard',
+    'dashadmin' => 'Dashboard',
+    'profile' => 'profile',
     'categories' => 'Categories',
     'all_categories' => 'All Categories',
 

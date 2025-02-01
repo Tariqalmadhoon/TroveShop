@@ -1,7 +1,9 @@
 <?php
 return [
     'dash' => 'الرئيسية',
+    'dashadmin' => 'لوحة التحكم',
     'categories' => 'الاقسام',
+    'profile' => 'الحساب',
     'all_categories' => 'جميع الاقسام',
 
     'products' => 'المنتجات',

@@ -9,6 +9,10 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NotificationController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Illuminate\Http\Request;
+
+use App\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -82,5 +86,11 @@ Route::middleware(['auth'])->group(function () {
 
 
 
+
+
+Route::post('/check-email', function (Request $request) {
+    $exists = User::where('email', $request->email)->exists();
+    return response()->json(['exists' => $exists]);
+})->name('check.email');
 
 //

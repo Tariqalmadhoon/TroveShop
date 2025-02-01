@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Category: {{ $category->trans_name }}</h2>
+                        <h2>{{__('front.catdes')}}: {{ $category->trans_name }}</h2>
                         <span>{{ $category->trans_description }}</span>
                     </div>
                 </div>

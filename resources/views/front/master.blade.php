@@ -270,7 +270,7 @@
                                         @if(Auth::check() && Auth::user()->name == 'Admin')
                                         <a class="dropdown-item" href="{{ route('admin.index') }}">
                                             <i class="fas fa-dashboard fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Dashboard
+                                            {{__('admin.dashadmin')}}
                                         </a>
                                         @endif
 
@@ -278,23 +278,23 @@
                                         @if (Auth::check() && Auth::user()->name == 'Admin')
                                         <a class="dropdown-item" href="{{ route('admin.profile') }}">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Profile
+                                            {{__('admin.profile')}}
                                         </a>
                                         @else
 
                                         <a class="dropdown-item" href="{{ route('front.profile') }}">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Profile
+                                            {{__('admin.profile')}}
                                         </a>
                                         @endif
-                                        <a class="dropdown-item" href="#">
+                                        {{-- <a class="dropdown-item" href="#">
                                             <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Settings
                                         </a>
                                         <a class="dropdown-item" href="#">
                                             <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Activity Log
-                                        </a>
+                                        </a> --}}
                                         <div class="dropdown-divider"></div>
                                         <form action="{{ route('logout') }}" method="POST">
                                             @csrf
@@ -341,7 +341,7 @@
                         </div>
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                            <li><a href="#">hexashop@company.com</a></li>
+                            <li><a href="#">TroveShop@company.com</a></li>
                             <li><a href="#">010-020-0340</a></li>
                         </ul>
                     </div>
@@ -374,11 +374,8 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="under-footer">
-                        <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.
+                        <p>Copyright © 2025 TroveShop Co., Ltd. All Rights Reserved.
 
-                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free & premium responsive templates">ThemeWagon</a></p>
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>

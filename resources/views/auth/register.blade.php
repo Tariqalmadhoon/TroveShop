@@ -85,7 +85,7 @@
                 z-index: 10;
                 padding: 60px 60px 80px;
                 left: 50%;
-                margin-left: -230px;
+                margin-left: -200px;
                 opacity: 0.85;
                 border-radius: 10px;
         }
@@ -192,6 +192,12 @@
         }
 
 
+            .danger-email {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
 
 
 
@@ -206,10 +212,9 @@
         @error('name')
             <small class="danger-name">{{ $message }}</small>
         @enderror
-        <input type="email" name="email" placeholder="Email"  />
-        @error('email')
-        <small class="danger-email">{{ $message }}</small>
-        @enderror
+        <input type="email" name="email" id="email" placeholder="Email" required />
+        <small id="email-error" class="danger-email" style="display: none;">This email is already registered.</small>
+
         <input type="password" name="password" placeholder="Password"  />
         @error('password')
         <small class="danger-password">{{ $message }}</small>
@@ -227,41 +232,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            var form = $(".register-form");
-            var submitButton = $(".submit");
-            var successDialog = $(".success-dialog");
-            var body = $("body");
-
-            form.on("submit", function (e) {
-                e.preventDefault();
-
-                var tl = new TimelineLite();
-
-                // Animation for submit button
-                tl.to(submitButton, 0.3, {
-                    scale: 0.9,
-                    ease: Power2.easeOut,
-                })
-                    .to(submitButton, 0.3, {
-                        scale: 1,
-                        backgroundColor: "#484848",
-                        ease: Power2.easeInOut,
-                    })
-                    .to(body, 0.5, {
-                        backgroundColor: "#000",
-                        opacity: 0.7,
-                        ease: Power2.easeOut,
-                        onComplete: function () {
-                            // Show success dialog
-                            successDialog.fadeIn();
-
-                            // Simulate form submission
-                            form.off("submit").submit();
-                        },
-                    });
+  $(document).ready(function () {
+    $("#email").on("blur", function () {
+        var email = $(this).val();
+        if (email.length > 0) {
+            $.ajax({
+                url: "{{ route('check.email') }}", // استدعاء API
+                method: "POST",
+                data: {
+                    email: email,
+                    _token: "{{ csrf_token() }}" // تأمين الطلب باستخدام CSRF
+                },
+                success: function (response) {
+                    // إذا كان البريد موجود في قاعدة البيانات
+                    if (response.exists) {
+                        // عرض رسالة الخطأ
+                        $("#email-error").show();
+                    } else {
+                        // إخفاء رسالة الخطأ
+                        $("#email-error").hide();
+                    }
+                },
+                error: function () {
+                    // في حالة حدوث خطأ في الطلب
+                    alert("An error occurred. Please try again.");
+                }
             });
-        });
+        }
+    });
+});
     </script>
 </body>
 

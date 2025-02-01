@@ -26,13 +26,13 @@
                     <div class="left-content">
                         <div class="thumb">
                             <div class="inner-content">
-                                <h4>We Are Trove Shope</h4>
+                                <h4>We Are Trove Shop</h4>
                                 <span>Awesome, clean &amp; creative HTML5 Template</span>
                                 <div class="main-border-button">
                                     <a href="{{ route('front.products') }}">Purchase Now!</a>
                                 </div>
                             </div>
-                            <img   src="{{ asset('assets/images/img-leftRe.png') }}" alt="">
+                            <img   src="{{ asset('assets/images/left-myimg2-2.png') }}" alt="">
                         </div>
                     </div>
                 </div>

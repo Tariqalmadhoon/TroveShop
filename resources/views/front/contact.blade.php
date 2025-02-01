@@ -48,8 +48,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Contact Us</h2>
-                        <span>Awesome, clean &amp; creative HTML5 Template</span>
+                        <h2>{{__('front.contactus')}}</h2>
+                        <span>{{__('front.contactusUnder')}}</span>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,6 @@
                         </div>
                     @endif
 
-                    <!-- عرض رسائل الخطأ -->
                     @if ($errors->any())
                         <div class="alert-error alert">
                             <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -91,8 +90,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>Say Hello. Don't Be Shy!</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <h2>{{__('front.sayHello')}}</h2>
+                        <span>Details to details is what makes Trove shop different from the other themes.</span>
                     </div>
                     <form id="contact" action="{{ route('front.send') }}" method="POST">
                         @csrf
