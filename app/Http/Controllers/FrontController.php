@@ -64,7 +64,7 @@ class FrontController extends Controller
     public function store(Request $request){
         $request->validate([
             'rating' => 'required',
-            'comment' => 'required'
+
         ],[
 
             'comment.required' => 'Please write a comment'

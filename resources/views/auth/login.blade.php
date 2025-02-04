@@ -89,11 +89,22 @@
         form h2 {
             text-transform: uppercase;
             text-align: center;
-            font-size: 18px;
+            font-size: 12px;
+            color: #2f1f1e;
+            letter-spacing: 0.061em;
+
+            margin-bottom: 20px;
+        }
+
+
+        form h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 22px;
             color: #2f1f1e;
             letter-spacing: 0.061em;
             margin-top: 60px;
-            margin-bottom: 20px;
+
         }
 
         form h2.success {
@@ -288,7 +299,7 @@ color: red;
 
 <body>
 
-    <form class="sub-form" method="POST" action="{{ route('login') }}">
+    <form class="sub-form" method="POST" action="{{ route('login') }}" autocomplete="off">
         @csrf
         <div class="input-contain">
             <div class="circle circle-shop">
@@ -308,17 +319,18 @@ color: red;
                         d="M24 2.1C23.5 2.3 1.2 10.2 0.8 10.3c-0.4 0.1-0.5 0.5 0 0.6 0.5 0.2 5 2 5 2H5.8l3 1.2c0 0 14.2-10.4 14.4-10.6 0.2-0.1 0.4 0.1 0.3 0.3 -0.1 0.2-10.3 11.2-10.3 11.2 0 0 0 0 0 0l-0.6 0.7 0.8 0.4c0 0 6.1 3.3 6.5 3.5 0.4 0.2 0.9 0 1-0.4 0.1-0.6 3.7-16.1 3.8-16.4C24.7 2.3 24.4 2 24 2.1zM8.7 21.2c0 0.3 0.2 0.4 0.4 0.2 0.3-0.3 3.7-3.4 3.7-3.4l-4.2-2.2V21.2z" />
                 </svg>
             </div>
+            <h1 class="info">Trove Shop</h1>
             <h2 class="info">Login Now</h2>
             <br>
             <h2 class="success">Success!</h2>
 
-            <input type="email" name="email" id="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email')  }}">
+            <input type="email" name="email" id="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email')  }}" autocomplete="new-email">
             @error('email')
             <small class="invalid-feedback">{{ $message }}</small>
             @enderror
 
 
-            <input type="password" id="password" name="password" placeholder="Password" required autocomplete="current-password" class="form-control @error('password')
+            <input type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password" class="form-control @error('password')
                 is-invalid @enderror "/>
                 @error('password')
                     <small class="invalid-feedback-pass">{{ $message }}</small>
@@ -497,6 +509,9 @@ $(document).ready(function () {
         }, 2000);
     });
 });
+
+
+
 
     </script>
 

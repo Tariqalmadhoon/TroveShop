@@ -114,18 +114,19 @@ html[dir="rtl"] .rating {
                     <div class="quantity-content">
                         <div class="right-content mb-3">
                             <h6>No. of Orders</h6>
-                        </div>
-                        <div class="right-content">
                             <div class="quantity buttons_added">
                                 <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
                             </div>
                         </div>
+                        <div class="right-content">
+
+                        </div>
                     </div>
-                            <div class="main-border-button">
-                                <button class="btn btn-dark mt-20" href="#">Add To Cart</button>
-                            </div>
-
-
+                        @auth
+                        <div class="main-border-button">
+                            <button class="btn btn-dark mt-20" href="#">Add To Cart</button>
+                        </div>
+                        @endauth
 
                         </form>
 

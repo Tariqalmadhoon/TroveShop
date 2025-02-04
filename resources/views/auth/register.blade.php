@@ -83,7 +83,7 @@
                 margin-bottom: 50px;
                 position: absolute;
                 z-index: 10;
-                padding: 60px 60px 80px;
+                padding: 20px 60px 80px;
                 left: 50%;
                 margin-left: -200px;
                 opacity: 0.85;
@@ -93,11 +93,21 @@
         form h2 {
             text-transform: uppercase;
             text-align: center;
-            font-size: 18px;
+            font-size: 12px;
             color: #2f1f1e;
             letter-spacing: 0.061em;
             margin-top: 10px;
             margin-bottom: 20px;
+        }
+
+        form h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 22px;
+            color: #2f1f1e;
+            letter-spacing: 0.061em;
+            margin-top: 60px;
+
         }
 
         form input {
@@ -207,15 +217,16 @@
 <body>
     <form class="register-form" method="POST" action="{{ route('register') }}">
         @csrf
+        <h1 class="info">Trove Shop</h1>
         <h2>Register Now</h2>
         <input type="text" name="name" placeholder="Name"  autofocus />
         @error('name')
             <small class="danger-name">{{ $message }}</small>
         @enderror
-        <input type="email" name="email" id="email" placeholder="Email" required />
+        <input type="email" name="email" id="email" placeholder="Email" required autocomplete="new-email" />
         <small id="email-error" class="danger-email" style="display: none;">This email is already registered.</small>
 
-        <input type="password" name="password" placeholder="Password"  />
+        <input type="password" name="password" placeholder="Password"  autocomplete="new-password"/>
         @error('password')
         <small class="danger-password">{{ $message }}</small>
         @enderror
