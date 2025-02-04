@@ -308,6 +308,8 @@
 
                             @if (!Auth::check())
                             <li class="border "><a href="{{route('register')}}">{{__('front.signup')}}</a></li>
+                            <li><a href="{{route('login')}}">{{__('login')}}</a></li>
+
                             @endif
                         </ul>
                         <a class='menu-trigger'>
