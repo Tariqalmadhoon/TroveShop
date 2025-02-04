@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-image">
-                        <img src="assets/images/about-left-image.jpg" alt="">
+                        <img src="{{asset('assets/images/about-left-image.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -71,7 +71,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-01.jpg">
+                            <img src="{{asset('assets/images/team-member-01')}}.jpg">
                         </div>
                         <div class="down-content">
                             <h4>Ragnar Lodbrok</h4>
@@ -92,7 +92,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-02.jpg">
+                            <img src="{{asset('assets/images/team-member-02')}}.jpg">
                         </div>
                         <div class="down-content">
                             <h4>Ragnar Lodbrok</h4>
@@ -113,7 +113,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <img src="assets/images/team-member-03.jpg">
+                            <img src="{{asset('assets/images/team-member-03')}}.jpg">
                         </div>
                         <div class="down-content">
                             <h4>Ragnar Lodbrok</h4>
@@ -140,21 +140,21 @@
                     <div class="service-item">
                         <h4>A modern fashion</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-                        <img src="assets/images/service-01.jpg" alt="">
+                        <img src="{{asset('assets/images/service-01.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Convenient shopping</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-                        <img src="assets/images/service-02.jpg" alt="">
+                        <img src="{{asset('assets/images/service-02.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="service-item">
                         <h4>Fast and safe delivery</h4>
                         <p>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-                        <img src="assets/images/service-03.jpg" alt="">
+                        <img src="{{asset('assets/images/service-03.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
