@@ -654,11 +654,22 @@ header
 }
 
 @media (min-width: 767px) {
-  .header-area .main-nav .nav {
-    display: flex !important;
-  }
-}
+    .header-area .main-nav .nav {
+      display: flex !important;
 
+    }
+
+  }
+
+  /* @media(max-width: 1290px) {
+    .header-area .main-nav .nav {
+        display: flex !important;
+        background-color: #dfdfdf8c;
+        margin-top: 0;
+
+      }
+
+  } */
 
 /*
 ---------------------------------------------
@@ -2261,6 +2272,10 @@ responsive
 @media (max-width: 992px) {
   .main-banner .right-content .right-first-image .thumb .hover-content p {
     display: block;
+  }
+
+  .header-area .main-nav .nav{
+    margin-top:35px;
   }
   .header-area .main-nav .nav li.submenu:after {
     right: 3px;

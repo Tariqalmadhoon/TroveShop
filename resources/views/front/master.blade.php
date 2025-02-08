@@ -105,7 +105,7 @@
     <header class="header-area header-sticky">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-11">
+                <div class="">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{{ route('front.index') }}" class="logo">
